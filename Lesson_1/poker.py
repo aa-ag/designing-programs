@@ -7,9 +7,10 @@ def poker():
     '''
      returns best hand: poker([hands...]) => hand
     '''
-    pass
+    print(max([3, 4, 5, 0]), max([3, 4, -5, 0], key=abs))
+    # 5 -5
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    pass
+    poker()
