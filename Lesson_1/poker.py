@@ -3,6 +3,12 @@
 ############------------ GLOBAL VARIABLES ------------############
 
 ############------------ FUNCTIONS ------------############
+def poker():
+    '''
+     returns best hand: poker([hands...]) => hand
+    '''
+    pass
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
