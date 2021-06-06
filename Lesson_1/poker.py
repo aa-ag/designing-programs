@@ -14,7 +14,7 @@
 #
 def poker(hands):
     "Return the best hand: poker([hand,...]) => hand"
-    return max(hand_rank(hands))
+    return max(hands, key=hand_rank)
 
 
 def hand_rank(hands):
@@ -33,6 +33,15 @@ def hand_rank(hands):
     return sorted_hands
 
 
-############------------ DRIVER CODE ------------############
-if __name__ == "__main__":
-    print(poker([(6, 'Spades'), (5, 'Spades'), (7, 'Spades')]))
+def test():
+    '''
+     test cases from class
+    '''
+    sf = "6C 7C 8C 9C TC".split()
+    fk = "9D 9H 9S 9C 7D".split()
+    fh = "TD TC TH 7C 7D".split()
+    assert poker([sf, fk, fh]) == sf
+    return "tests pass"
+
+
+print(test)
