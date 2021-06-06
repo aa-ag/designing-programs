@@ -22,7 +22,15 @@ def hand_rank(hands):
 
     deck = [(value, suit) for value in range(1, 14) for suit in suits]
 
-    return [deck.index(i) for i in hands]
+    hands_and_their_indexes = {}
+
+    for hand in hands:
+        hands_and_their_indexes[hand] = deck.index(hand)
+
+    sorted_hands = sorted(hands_and_their_indexes,
+                          key=hands_and_their_indexes.get)
+
+    return sorted_hands
 
 
 ############------------ DRIVER CODE ------------############
