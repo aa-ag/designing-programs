@@ -12,9 +12,9 @@
 # anything, but clicking SUBMIT will let you know if you
 # have gotten the problem right.
 #
-# def poker(hands):
-#     "Return the best hand: poker([hand,...]) => hand"
-#     return max(hands, key=hand_rank)
+def poker(hands):
+    "Return the best hand: poker([hand,...]) => hand"
+    return max(hand_rank(hands))
 
 
 def hand_rank(hands):
@@ -35,4 +35,4 @@ def hand_rank(hands):
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    print(hand_rank([(6, 'Spades'), (5, 'Spades'), (7, 'Spades')]))
+    print(poker([(6, 'Spades'), (5, 'Spades'), (7, 'Spades')]))
