@@ -17,20 +17,30 @@ def poker(hands):
     return max(hands, key=hand_rank)
 
 
-def hand_rank(hands):
-    suits = ['Hearts', 'Diamonds', 'Spades', 'Clubs']
+def hand_rank(hand):
+    "Return a value indicating the ranking of a hand."
+    ranks = card_ranks(hand)
+    if straight(ranks) and flush(hand):
+        return (8, max(ranks))
+    elif kind(4, ranks):
+        return (7, kind(4, ranks), kind(1, ranks))
+    elif ...
 
-    deck = [(value, suit) for value in range(1, 14) for suit in suits]
 
-    hands_and_their_indexes = {}
+# def hand_rank(hands):
+#     suits = ['Hearts', 'Diamonds', 'Spades', 'Clubs']
 
-    for hand in hands:
-        hands_and_their_indexes[hand] = deck.index(hand)
+#     deck = [(value, suit) for value in range(1, 14) for suit in suits]
 
-    sorted_hands = sorted(hands_and_their_indexes,
-                          key=hands_and_their_indexes.get)
+#     hands_and_their_indexes = {}
 
-    return sorted_hands
+#     for hand in hands:
+#         hands_and_their_indexes[hand] = deck.index(hand)
+
+#     sorted_hands = sorted(hands_and_their_indexes,
+#                           key=hands_and_their_indexes.get)
+
+#     return sorted_hands
 
 
 def test():
