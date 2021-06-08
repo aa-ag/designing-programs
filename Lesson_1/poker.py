@@ -43,6 +43,8 @@ def test():
     assert poker([sf, fk, fh]) == sf
     assert poker([fk, fh]) == fk
     assert poker([fh, fh]) == fh
+    assert poker([sf]) == sf
+    assert poker([sf] + 99*[fh]) == sf
     return "tests pass"
 
 
